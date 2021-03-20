@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-3">
+        <img [src]="product.imgUrl" alt="It is an image" >
+    </div>
+    <div class="col-md-9">
+        <h5>{{product.title}}</h5> <span class="badge" [ngClass]="{'badge-success' : product.price < 50, 'badge-danger' : product.price >= 50}">{{product.price}}</span>
+        <p>{{product.description}}</p>
+        <p></p>
+    </div>
+</div>
+
+<!--
+<div class="card">
+    <img class="card-img-top" [src]="product.imgUrl" alt="It is an image" >
+    <div class="card-body">
+        <h5 clas="card-text"></h5>
+    </div>
+</div>
+-->

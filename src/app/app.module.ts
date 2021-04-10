@@ -9,6 +9,7 @@ import { ProductComponent } from './product-list/product/product.component';
 import { CartItemComponent } from './shopping-cart/cart-item/cart-item.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductListComponent,
     ShoppingCartComponent,
     ProductComponent,
-    CartItemComponent
+    CartItemComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,

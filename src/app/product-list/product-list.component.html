@@ -1,5 +1,22 @@
+<div class="row mt-2">
+    <div class="col-md-9">
+        <input type="text" placeholder="Type the product title here" class="form-control" [(ngModel)]="searchQuery">
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary text-white" (click)="search()">Search</button>
+    </div>
+</div>
+
 <div class="row">
-    <div class="col-md-6" *ngFor="let product of products">
-        <app-product [product] = "product"></app-product>
+    <div class="col-md-8">
+        <h5>Products</h5>
+        <div class="row">
+            <div class="col-md-6" *ngFor="let product of products">
+                <app-product [product]="product"></app-product>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <app-shopping-cart></app-shopping-cart>
     </div>
 </div>

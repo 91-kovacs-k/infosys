@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-6">
+        <form [formGroup]="formGroup">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" formControlName="id" required>
+            <div class="text-danger" *ngIf="id?.invalid && (id?.dirty || id?.touched)">
+                <small *ngIf="id?.errors?.required">ID is required!</small>
+                <small *ngIf="id?.errors?.pattern">ID cannot contain special characters!</small>
+            </div>
+
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" formControlName="title" required>
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" formControlName="description" required>
+            <label for="price"></label>
+            <input type="number" class="form-control" id="price" formControlName="price" required>
+
+
+
+            <label for="image"></label>
+            <input type="text" class="form-control" id="imgUrl" formControlName="imgUrl" required>
+            <label for="brand"></label>
+            <input type="text" class="form-control" id="brand" formControlName="brand" required>
+            <button type="submit" class="btn btn-primary mt-2" [disabled]="!formGroup.valid" (click)="addProduct()"
+                [disabled]="formGroup.invalid">Add
+                Product</button>
+        </form>
+    </div>
+</div>
